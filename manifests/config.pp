@@ -16,10 +16,11 @@ class aptly::config {
     content => template('aptly/aptly.conf.erb'),
   }
 
-  file { $aptly::root_dir:
-    ensure  => directory,
-    mode    => '0644',
-    recurse => true,
+  if $aptly::manage_root_dir == true {
+    file { $aptly::root_dir:
+      ensure  => directory,
+      mode    => '0644',
+      recurse => true,
+    }
   }
-
 }

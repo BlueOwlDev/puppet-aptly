@@ -20,6 +20,7 @@ class aptly::params {
   $uid             = 450
   $group           = 'aptly'
   $gid             = 450
+  $manage_root_dir = true
   $root_dir        = '/var/aptly'
   $architectures   = [$::architecture]
   $ppa_dist        = 'ubuntu'

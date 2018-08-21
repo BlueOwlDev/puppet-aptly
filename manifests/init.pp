@@ -19,6 +19,7 @@ class aptly (
   $uid                  = $aptly::params::uid,
   $group                = $aptly::params::group,
   $gid                  = $aptly::params::gid,
+  $manage_root_dir      = $aptly::params::manage_root_dir,
   $root_dir             = $aptly::params::root_dir,
   $architectures        = $aptly::params::architectures,
   $ppa_dist             = $aptly::params::ppa_dist,
